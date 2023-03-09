@@ -1,0 +1,164 @@
+form > fieldset {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    top: 3rem;
+    border: 1px var(--background-grey) solid;
+    margin-bottom: 3rem;
+}
+/* first fieldset formatting excluding header text */
+#set-metadata:not("h2") {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    border: 1px var(--background-grey) solid;
+}
+/* label + input container */
+#set-metadata > span.input-wrapper {
+    display: inline-block;
+    width: 14rem;
+    height: 4rem;
+    position: relative;
+    bottom: 30px;
+    font-size: 1.1em;
+    margin-left: 1rem;
+}
+/* set name and course text inputs */
+#set-metadata > span.input-wrapper > input {
+    font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* set name and course labels visible under input when focused */
+span.input-wrapper > label {
+    visibility: hidden;
+    color: var(--create-grey);
+    margin-left: 7px;
+}
+
+/* BOTTOM HALF PAGE */
+/* fieldset formatting */
+#card-metadata:not("h2"):not("label") {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+/* word, definition, and add button */
+div.card-input-wrapper {
+    /* display: inline-block relative; */
+    display: flex;
+    flex-flow: column;
+    width: 40%;
+}
+/* word and definition labels and input boxes */
+div.card-input-wrapper > span.input-wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 5rem;
+    font-size: 1.1em;
+    margin-left: 1rem;
+}
+
+div.card-input-wrapper > span.input-wrapper > input {
+    width: 18rem;
+    font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+dl {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px var(--create-grey) dashed;
+    background-color: var(--background-grey);
+    color: var(--create-grey);
+    border-radius: 4px;
+    left: 32rem;
+    bottom: 12rem;
+    width: 25rem;
+    height: 14rem;
+}
+
+/* upload button */
+#upload-label {
+    position: absolute;
+    right: 0px;
+    top: -2rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    color: darkslategray;
+    padding: .25rem;
+    border-radius: 4px;
+}
+#upload-label:hover {
+    background-color: var(--background-grey);
+}
+h2 {
+    position: relative;
+    bottom: 50px;
+    color: var(--create-grey);
+    text-transform: uppercase;
+    font-size: var(--medium-font);
+}
+
+/* input box style */
+input {
+    margin: 2px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 1px var(--create-grey) solid;
+}
+
+input[type=text]:focus::placeholder {
+    color: transparent;
+}
+input[type=text]:not(:placeholder-shown) + label{
+    visibility: visible;
+}
+input[type=text]:focus + label {
+    visibility: visible;
+}
+/* button css (DONE) */
+#add-card-button {
+    /* position: relative;
+    bottom: 1rem;
+    left: .5rem; */
+    height: 3rem;
+    width: 20rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: .5rem 7rem;
+    margin: 0 1rem;
+    font-size: var(--medium-font);
+    border: none;
+    color: white;
+    background-color: var(--highlight-green);
+    border-radius: 4px;
+}
+#add-card-button:hover:not([disabled]) {
+    background-color: rgb(132, 224, 132);
+}
+
+button.secondary {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    font-size: var(--medium-font);
+    border: none;
+    background-color: var(--create-grey);
+    border-radius: 4px;
+}
+button:hover:not([disabled]) {
+    background: rgb(195, 195, 195);
+
+}
+button:active:not([disabled]) {
+    background: rgb(195, 195, 195);
+}
+input[type=file] {
+    display: none;
+}

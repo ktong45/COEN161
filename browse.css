@@ -1,0 +1,60 @@
+h2 {
+    font-family: Georgia;
+}
+
+dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+
+}
+
+div:not(.title-wrapper){
+    display: inline-block;
+    flex-direction: row;
+    height: var(--card-height);
+    box-sizing: border-box;
+    width: var(--card-width);
+    background-color: var(--background-grey);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+#addCard {
+    display: flex;
+    flex-flow: column;
+}
+
+input {
+    margin: 1em 1em 1em 1em;
+}
+
+#cardAdder {
+    height: 2rem;
+    width: 9rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2rem 0 0 1em;
+    border: none;
+    color: white;
+    background-color: var(--highlight-green);
+    border-radius: 4px;
+}
+#cardAdder:hover:not([disabled]) {
+    background-color: rgb(132, 224, 132);
+}
+#cardAdder:disabled {
+    background-color: rgb(132, 224, 132);
+}
+
+dt {
+    /* border: 1px black solid; */
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 1rem;
+}
+dd {
+    /* border: 1px black solid; */
+    margin: .5rem 1rem;
+}
